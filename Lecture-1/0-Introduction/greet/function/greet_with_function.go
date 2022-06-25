@@ -35,5 +35,5 @@ func greetWithReturn(name string) string {
 
 // createGreet function with return value created with argument
 func createGreet(name string) string {
-	return "Selam " + name + " :)"
+	return "Hello " + name + " :)"
 }

@@ -5,8 +5,8 @@ import (
 )
 
 func main() {
-	fmt.Println("Selam :)")
-	
+	fmt.Println("Hello world :)")
+
 	// there is also 2 other ways to print a string without using fmt package
 	// printf("%s", "Selam :)")
 	// println("Selam :)")

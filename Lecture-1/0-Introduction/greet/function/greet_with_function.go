@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
 	// prints the string directly
@@ -9,6 +12,14 @@ func main() {
 	// prints the string returned by the function
 	greetings := greetWithReturn("Tohan")
 	fmt.Println(greetings) // Hello Tohan :)
+
+	// prints the string created by the function with argument
+	// you can run the program with the argument "Tohan" to see the result
+	// example: go run greet_with_function.go Tohan
+	name := os.Args[1]
+	greeting := createGreet(name)
+	fmt.Printf("%s\n", greeting)
+
 }
 
 // greet function without return value
@@ -20,4 +31,9 @@ func greet(name string) {
 func greetWithReturn(name string) string {
 	greeting := "Hello " + name + " :)"
 	return greeting
+}
+
+// createGreet function with return value created with argument
+func createGreet(name string) string {
+	return "Selam " + name + " :)"
 }

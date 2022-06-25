@@ -20,3 +20,12 @@ func PopCount(x uint64) int {
 		pc[byte(x>>(6*8))] +
 		pc[byte(x>>(7*8))])
 }
+
+// Exercise 2.3: PopCountLoop is a loop version of PopCount.
+func PopCount2(x uint64) int {
+	var sum byte
+	for i := uint(0); i < 8; i++ {
+		sum += pc[byte(x>>(i*8))]
+	}
+	return int(sum)
+}

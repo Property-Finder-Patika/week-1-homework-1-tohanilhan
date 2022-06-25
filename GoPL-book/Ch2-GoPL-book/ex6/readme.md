@@ -1,0 +1,1 @@
+**Exercises on Page 43 and 44 of the [GoPL book](https://drive.google.com/file/d/1kvsEfCuOYecBrfy12tTI1kDDbC4e4AVy/view?usp=sharing)**

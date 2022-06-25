@@ -20,6 +20,13 @@ func main() {
 	greeting := createGreet(name)
 	fmt.Printf("%s\n", greeting)
 
+	// we can also use the scanln function to get the input from the user instead of using os.Args
+	var anotherName string
+	fmt.Println("Please enter your name:")
+	fmt.Scanln(&name)
+	greetingWithAnotherName := createGreet(anotherName)
+	fmt.Printf("%s\n", greetingWithAnotherName)
+
 }
 
 // greet function without return value

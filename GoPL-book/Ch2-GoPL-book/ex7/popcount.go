@@ -21,11 +21,31 @@ func PopCount(x uint64) int {
 		pc[byte(x>>(7*8))])
 }
 
-// Exercise 2.3: PopCountLoop is a loop version of PopCount.
-func PopCount2(x uint64) int {
+// Exercise 2.3
+func PopCountLoop(x uint64) int {
 	var sum byte
 	for i := uint(0); i < 8; i++ {
 		sum += pc[byte(x>>(i*8))]
 	}
 	return int(sum)
+}
+
+// Exercise 2.4
+func PopCountByShifting(x uint64) int {
+	n := 0
+	for i := uint(0); i < 64; i++ {
+		if x&(1<<i) != 0 {
+			n++
+		}
+	}
+	return n
+}
+
+func PopCountByClearing(x uint64) int {
+	n := 0
+	for x != 0 {
+		x = x & (x - 1) // clear rightmost non-zero bit
+		n++
+	}
+	return n
 }
